@@ -19,10 +19,12 @@ class ViewController: UIViewController {
         redView.layer.cornerRadius = 80
         yellowView.layer.cornerRadius = 80
         greenView.layer.cornerRadius = 80
-        startButton.layer.cornerRadius = 10
+        
         redView.alpha = 0.3
         yellowView.alpha = 0.3
         greenView.alpha = 0.3
+        
+        startButton.layer.cornerRadius = 10
     }
     
     @IBAction func startButtonPressed() {
@@ -33,20 +35,15 @@ class ViewController: UIViewController {
             redView.alpha = 1
             yellowView.alpha = 0.3
             greenView.alpha = 0.3
-            redView.backgroundColor = .systemRed
         case 2:
             redView.alpha = 0.3
             yellowView.alpha = 1
             greenView.alpha = 0.3
-            yellowView.backgroundColor = .systemYellow
-        case 3:
+        default:
             redView.alpha = 0.3
             yellowView.alpha = 0.3
             greenView.alpha = 1
-            greenView.backgroundColor = .systemGreen
             colorValue = 0
-        default:
-            break
         }
     }
 }
